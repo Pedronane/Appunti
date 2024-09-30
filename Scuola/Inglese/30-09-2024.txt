@@ -1,0 +1,15 @@
+PERIODI IPOTETICI
+
+REALTA' 	--> zero | first (0-1) conditional
+POSSIBILITA' 	--> second (2) conditional
+IRREALTA'	--> third (3) conditional
+
+0 conditional is used for axioms, for facts always true: (if - when - unless) + pres simple, pres simple
+1st conditional is used for things that will happen if a condition is met: (=) + pres simple, will + base form
+2nd conditional is used for hypotesis: (=) + past simple, would + base form
+3rd conditional is used for unreality: (=) + past perfect, would + have + participle
+
+0 - If i study, I pass the exam
+1 - If i study, I will pass the exam
+2 - If i studied, I would pass the exam
+3 - If i had studied, I would have passed the exam

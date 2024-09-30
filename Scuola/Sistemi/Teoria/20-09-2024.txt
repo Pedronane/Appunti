@@ -1,0 +1,44 @@
+Codifica delle informazioni
+come i dati si trasformano in dati digitali
+
+La codifica e il processo che consente di usare un linguaggio tale da essere capito da un pc
+passaggio di corrente 1 non passaggio 0
+La codifica avviene in bit, Un bit bynary digit e l'unita minima di informazione e puo asssumere due valori, in generale 2allan numero di combinazioni
+
+Come vengono codificare?
+Ascii o Unicode
+Il codice Ascii(american standard code fr information Interchange) ci sono la codifica ascii vecchia e quella nuova, quella vecchia usa 7 bit quella nuova 8.
+Il codice ascii andava bene prima ma le 256 possibilita non sono suficenti percio anno esteso il codice
+Il codice unicode e un codice a 16 bit
+
+Esercizio:consideriamo la seguente frase codifica delle informazioni quanto occupa su hdd con codifica unicode 
+Sono 54 byte o 27 word 
+
+una rete serve per scambiare informazioni
+Comunicare appartenente a piu persone, comunicazione condivisione di idee 
+Le parole sono il messaggio ed esso e il contenuto della comunicazione
+ogni messaggio ha uno scopo
+Si ha una comunicazione quando si ha uno scambio, tra il mittente(sorgente) e il destinatario
+Il messaggio puo essere trasmesso attraverso diversi canali
+il codice e un sistema si segni e simboli che segue regole precise
+il codice puo essere verbale, non verbale e misto
+
+Per avere una comunicazione
+Protocollo di comunicazione insieme di regole hardware e software che permettono di scambiare informazioni tra due o piu entita
+Tutte le informazioni vengono trasmesse atraverso un canale
+La codifica e il linguaggio usato, chi riceve decodifica le informazioni, convertendo il codice riceve in un significato
+quando di mezzo ho due codici diversi, ho un codificatore
+In base al contesto si puo usare un registro formale o informale.
+
+
+
+LA COMUNICAZIONE 
+all'interno della rete un nodo e nu apparecchio
+l'host e un particolare nodo, che pero e un computer solo
+una rete di computer puo essere collegata ad un altra rete
+Le reti sono in due categorie in base alla topologia e in base alla tipologia(quanto e grande) 
+topologgia riporta su carta la rete
+6 diversi tipi di topologia, stella, bus, ad albero, anello, 
+
+perche collegare i computer, risolvono assieme lo stesso problema, accedere agli stessi dati per scopi diversi
+condividere risorse nella rete

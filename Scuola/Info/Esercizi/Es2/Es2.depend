@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1727264008 source:c:\users\pietro.marchesi\documents\esinfo\es2\funzioni.c
+	"header.h"
+
+1727264028 source:c:\users\pietro.marchesi\documents\esinfo\es2\main.c
+	"header.h"
+
+1727264527 c:\users\pietro.marchesi\documents\esinfo\es2\header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,13 @@
+Una variabile puntatore e una variabile che come valore ha un indirizzo di memoria di un altra cella(a livello grafico devo cambiare il disegno quando ho una variabile puntatore).
+
+L'indirizzo che contiene e l'indirizo della prima cella ad esempio AFB2 (a livello grafico facciamo una freccia)
+
+HEAP e una zona in memoria che si usa per i puntatori
+
+LINGUAGGIO C
+variabile normale
+int alfa;
+Puntatore
+int *punt;
+
+si tipizza il puntatore perche posso fare le somme(da continuare)

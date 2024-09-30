@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1726655537 source:/home/pietro/Scuola/Info/Es2/main.c
+	"header.h"
+
+1726655866 source:/home/pietro/Scuola/Info/Es2/funzioni.c
+	"header.h"
+
+1726655534 /home/pietro/Scuola/Info/Es2/header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1726655307 /home/pietro/Scuola/Info/Es2/funzioni.c
+	"header.h"
+

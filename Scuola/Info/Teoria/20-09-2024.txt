@@ -1,0 +1,29 @@
+FILE * fopen ( const char * filename, const char * mode );
+FILE* pFile = fopen("ciao.txt", "w");
+//serve per aprire un file
+//filename: nome del file interessato
+//mode: modalita' di apertura: 
+// - r: read; input
+// - w: write; output, sovrascrizione totale
+// - a: append; aggiunta in coda
+// - r+: read/update; lettura e modifica di un dato
+// - w+: write/update; elimina l'intero contenuto del file e si predispone per modificarlo
+// - a+: append/update; aggiunge in coda
+
+int fclose ( FILE * stream );
+//serve per chiudere il file
+
+int feof 
+da un valore diverso da zero se esiste l'end of file 
+
+char * fgets (char * str, int num, FILE * stream);
+str la stringa che memorizza
+num caratteri massimi che puo' leggere
+stream da dove legge la frase
+Finisce di leggere alla fine del file o alla fine della riga
+
+int fscanf (FILE * stram, const char * format, ...);
+legge dallo stram e memorizza i dati a seconda del format e dei parametri che puntano ad un altro storage.
+
+char * strtok (char * str, const char * delimiters);
+La prima volta che la utilizzo devo mettere la stringa che utilizzo ma dalla seconda devo mettere NULL

@@ -1,0 +1,10 @@
+L 8086 ha 15 registri di cui 14 programmabili 1 il registro pipi non e programmabile
+
+int 21h, almeno una decina dei servizi principali. ad esempio il 4c quello per terminare il programma.
+
+Come si costruisce l'if, come fare i cicli e magari fare anche delle differenze
+
+cogliere e spiegare la differenza tra salti intrasegmentali e intersegmentali
+
+Per settimana prossima una documentazione del sito, descrizione del sito con quali sono le pagine principali, cosa contengono a livello di sito, ad esempio un titolo e due collegamenti, come gli sviluppo ad esempio il titolo al centro colorato ecc...
+

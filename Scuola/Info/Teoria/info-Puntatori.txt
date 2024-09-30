@@ -1,0 +1,70 @@
+Il puntatore e  una cella di memoria che contiene l'indidrizzo di memoria di una cella effettiva, tutte le variabili utilizzate vengono sistemate su uno stack, nello 
+stack vengono messe le variabili della subroutine che viene eseguita.  Questa roba si chiama istanza a compile time.
+Se io dichiaro un puntatore anche esso viene messo nello stack ma si disegna in modo diverso, il puntatore da solo non serve, serve solo se viene assegnto un indirizzo che punta ad un altra variabile
+Posso scrivere p(che e il puntatore) = null; per indicare che non ha un indirizzo valido e deve essere inizializato.
+
+# COME USARE I PUNTATORI
+
+int *p;
+int a;
+# inizializzare un puntatore
+p = &a;
+
+# oppure
+
+void Pippo(int *p){
+...
+}           # a livello di stack quando ho richiamato pippo p viene inizializzato con l'indirizzo di a
+
+Pippo(&a);
+
+# oppure allocazione dinamica
+
+# all'interno dello stack ho dichiarato un puntatore e chiedo in quel momento di dichiarare una variabile dentro l'HEAP per fare cio si usa la funzione malloc
+ void* malloc (size_t size); # prototipo della malloc
+
+p=(int *) malloc(sizeof(int)); # Istanziazione a runtime
+
+
+free(p) # con questo si toglie l'inizializzazione a runtime fatta in precedenza facendo tornare il valore a NULL
+
+# USARE UN PUNTATORE
+ quando uso un puntatore sono sicuro che il puntatore punta all'indirizzo di un'altra variablie il quale nome non mi interessa piu 
+ se io voglio mettere il valore quindici nella cella puntata dal puntatore ad esempio faccio
+ 
+ *p = 15
+
+ se scrivo
+
+ p = 15 
+
+ sto dicendo che il puntatore punta al byte 1111(15 in esadecimale)
+
+# altri esempi
+
+ char *s;
+ ...
+  *s = 'a';
+
+# passare l'indirizzo di un record
+
+struct TDati{
+...
+}
+
+Tdati rec;
+Tdati *p;
+
+p = &rec;
+
+invece di fare (*p).c1  fai p -> c1
+
+# Matematica dei puntatori
+
+int *p;
+char *p2;
+TDati *p3;
+
+p1 = &a
+p1 = p1+1
+#va all'intero che parte dopo

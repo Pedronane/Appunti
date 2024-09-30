@@ -1,0 +1,99 @@
+Applicazioni delle reti
+posta elettronica: spedire messaggi ad altre persone
+
+Accesso alle risorse
+avviene attraverso un'identificazione inserendo: identificativo utente e password
+l'identificativo utente e piu o meno conosciuto e assegnato dall'amministrazione
+la password e scelta dall'utente
+isp internet service provider: da diverse funzionalita dns posta elettronica
+amministratore di rete: responsabile dell'attuazione delle procedute per l'uso della rete
+
+Gestione della password
+Scegliere una password difficile da indovinare
+  deve contenere numeri e caratteri non alfanumerici
+  Non usare il proprio nome o una data di nascita
+Utilizzare password lunghe almeno 8 caratteri
+non distribuire la password agli altri
+non scrivere la password su fogli
+
+Protocollo di comunicazione
+Protocollo: Insieme di regole e passi da seguire in una determinata procedura
+Insieme di modalita (regole) che permettono a due computer di comunicare
+  ogni protocollo e diviso in livelli comunicanti
+  ogni livello non modifica ne interpreta i dati ricevuti dal livello inferiore/superiore ma toglie/aggiunge informazioni
+
+livelli paritetici comunicano comunque usando i livelli sottostanti
+i due livelli che permettono 
+
+tra un livello e l'altro esistono delle interfacce juvefacce
+ci sono 2 tipi di interfacce
+le interfacce permettono a un di comunicare con un altro 
+
+LA SCHEDA DI RETE IN INGLESE SI CHIAMA NIC  NETWORK INTERFACE CARD
+
+Coordinamento
+I nodi della rete devono coordinare la velocita di trasmissione per evitare la perdita di dati
+Sincrono: tutti gli aparecchi collegati alla rete adottano la stessa velocita di trasmissione
+  serve un controllo globale
+  tutti i dispositivi si devono adeguare al piu lento
+Asincrono: ogni apparecchio collegato alla rete ha una propria velocita di trasmissione
+  due dispositivi si accordano sulla velocita prima di trasmettere
+  usato in reti complesse
+
+Metodi di trasmissione
+Seriale si trasmette un bit alla volta
+  usato da modem mouse e tastirera
+
+
+i primi due trasmissione gli ultimi tre di comunicazione
+i primi due come vengono mandati i bit
+
+il sata(seriale) e piu sicuro ma anche piu lento
+il parallelo 
+
+Simplex il dispositivo puo solo ricevere o trasmettere
+Half duplex a trasmette b riceve e dopo b trasmette e a riceve a bisogno di un protocollo logico(il tipo che dice passo al walkie talkie) e fisico(il pulsantino)
+Il duplex o full duplex a differenza delle altre tipologie utilizza due canali uno su qui si trasmette sempre e uno su cui si riceve sempre esempio il telefono
+
+COMMUTAZIONE
+modalita in cui vengono scambiati tra due staziosi i dati
+commutazione di circuito
+dispositivi collegati trasferiscono il segnale a una centrale
+
+commutazione di pacchetto
+i dispositivi non sono collegati per tutta la durata della trasmissione
+i dati sono trasmessi in blocchi di grandezza fissata e per ogni pacchetto si trova un percorso
+il router instrada i pacchetti da una rete a una rete diversa (Il router non serve a collegarsi a internet ma a una rete diversa)
+
+CARATTERISTICHE 
+Collegamento ad uso esclusivo delle stazioni
+  alta velocita di trasmissione
+  capacita di trasmissione sfruttata al massimo
+  tratti di rete occupati anche se non si trasmette
+
+CARATTERISTICHE a pacchetto
+collegamento diviso da piu utenti
+  diminuisce la velocita di trasmissione]
+  collegamento non sfruttato al massimo perche il pacchetto contiene informazioni ulteriori e parametri di controllo
+ogni utente usa i protocolli che preferisce
+  la gestione e piu complessa
+i nodi intermedi devono memorizzare i pacchetti e provvedere a calcolare la via piu breve su cui instradarli(routing)
+utenti pagano in proporzione alla quantita di dati effettivamente trasmessi e non per durata
+
+CIRCUITO COMMUTATO
+Lo stesso circuito e usato per mettere in comunicazione piu stazioni
+  utilizzato nella rete telefonica
+
+Circuiti dedicati
+collega direttamente due entita (come la linea telefonica casa bianca cremlino)
+Larghezza di banda
+La larghezza che ho a disposizione per poter inviare i dati, in base alle frequenze possono passare piu o meno dati, quindi aumenta o diminuisce la velocita
+
+la dimensione del canale si misura in Hz (banda telefonica circa 2700Hz)
+
+Velocita di trasmissione
+la velocita di trasmissione si misura in bit per second bps
+
+i pixel sono i sngoli puntini che si hanno sullo schermo, vengono accesi o spenti e per accenderli o spegnerli
+
+conversione analogico digitale, digitale analogico

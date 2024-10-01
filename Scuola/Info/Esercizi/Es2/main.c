@@ -26,31 +26,42 @@ Realizzare un menu che presenti le seguenti funzionalità:
 */
 int main()
 {
-    int sc, n;
-    n = contarighe();
-    printf("%d", n);
-    TGioco *giochi = (TGioco*) malloc(sizeof(TGioco)*n);
+    int sc, n = 0, nrighe;
+    nrighe = contarighe();
+    TGioco *giochi = NULL;
     do{
-        printf("1)...");
-        sc = leggiInt(1,7,"Quale opzione si vuole scegliere?");
+        printf("1) Importazione catalogo;\n");
+        printf("2) Stampa catalogo;\n");
+        printf("3) Valore economico totale;\n");
+        printf("4) Dato ID, stampa dati;\n");
+        printf("5) Dato ID, modifica costo;\n");
+        printf("6) Esporta i videogiochi con una data la classificazione;\n");
+        printf("0) Termina programma;\n");
+        sc = leggiInt(0,6,"Quale opzione si vuole scegliere?");
         switch (sc){
             case 1:
-                importa(giochi, n);
+                giochi = importa(giochi, nrighe, &n);
                 break;
             case 2:
+                stampa(giochi, n);
                 break;
             case 3:
+                valoreEconomico(giochi, n);
                 break;
             case 4:
+                stampaDaId(giochi, n);
                 break;
             case 5:
+                modificaDaId(giochi, n);
                 break;
             case 6:
+                espCat(giochi,n);
                 break;
-            case 7:
+            case 0:
                 printf("Grazie per aver usato il programma\n");
                 break;
         }
     }while(sc != 0);
+    free(giochi);
     return 0;
 }

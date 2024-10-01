@@ -1,0 +1,16 @@
+
+
+body {
+  background-color: #2C302E;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.inizio{
+	width:150px;
+	height:150px;
+	border-radius: 8px;
+}

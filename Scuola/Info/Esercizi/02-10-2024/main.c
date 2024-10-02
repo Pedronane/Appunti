@@ -10,6 +10,7 @@ Scrivere funzione che "mystrconcat" che concatena due stringhe e ritorna la stri
 
 //Prototipi
 void leggiStr(char *s,char *msg);
+int lunghezza(char *s);
 char* mystrconcat();
 
 int main()
@@ -23,18 +24,25 @@ char* mystrconcat(){
     int n=0;
     leggiStr(s1,"Inserire la prima stringa");
     leggiStr(s2,"Inserire la secoda stringa");
-    int len = (strlen(s1) + strlen(s2))+1;
+    int len = (lunghezza(s1) + lunghezza(s2))+1;
     char* s = (char*) malloc(sizeof(char)*len);
-    for(int i=0;i<strlen(s1);i++){
+    for(int i=0;i<lunghezza(s1);i++){
         *(s+i)=*(s1+i);
     }
-    for(int i=strlen(s1);i<len;i++){
+    for(int i=lunghezza(s1);i<len;i++){
         *(s+i) = *(s2+n);
         n++;
     }
     *(s+len) = '\0';
     return s;
-    free(s);
+}
+
+int lunghezza(char *s){
+    int i;
+    while(*(s+i) != '\0'){
+        i++;
+    }
+    return i;
 }
 
 void leggiStr(char *s,char *msg){

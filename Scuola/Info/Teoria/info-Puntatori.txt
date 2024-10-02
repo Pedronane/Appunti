@@ -61,7 +61,7 @@ invece di fare (*p).c1  fai p -> c1
 
 # Matematica dei puntatori
 
-int *p;
+int *p1;
 char *p2;
 TDati *p3;
 

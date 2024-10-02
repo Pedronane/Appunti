@@ -1,18 +1,27 @@
+//Marchesi Pietro 4BI funzioni.c
 #include "header.h"
 
 //FUNZIONI
 
 /*
+
+DESCR VARIABILI
+id      descr                                                       tipo
+n       variabile contatore conta numero righe                      intera
+str     stringa contente l'attuale riga del file                    char*
+
+
+
 INIZIO
+n=0
 apri il file cataologo.csv in letture
 se file esiste
 allora
     conta tutte le rige in n
-    ritorna n
 altrimenti
     scrivi il file non esiste
-    ritorna 0
 fse
+ritorna n
 chiudi il file
 */
 int contarighe(){
@@ -33,6 +42,25 @@ int contarighe(){
 }
 
 /*
+DESCR FILE CSV
+il file catalogo.csv contiene un videogioco per riga con
+id,nome,costo,classificazione,se e usato o no tutti separati da un ;
+
+il file log.csv contiene la stessa struttura del file catalogo.csv
+
+DESCR VARIABILI
+id      descr                                                       tipo
+i       variabile contatore                                         intera
+str     variabile contente la riga letta dal file                   array di char
+aus     variabile contenente la copia di str                        array di char
+
+DESCR PARAMETRI
+id      descr                                                       tipo
+g       array di record TGioco                                      TGioco*
+n       numero di righe totali del file                             intero
+num     numero di righe importate                                   int*
+
+
 INIZIO
 apri file catalogo.csv in lettura
 se file esiste
@@ -87,6 +115,17 @@ TGioco* importa(TGioco *g, int n, int *num){
 }
 
 /*
+
+DESCR VARIABILI
+id      descr                                                       tipo
+i       variabile contatore                                         intera
+
+DESCR PARAMETRI
+id      descr                                                       tipo
+g       array di record TGioco                                      TGioco*
+n       numero elementi nel record                                  int*
+
+
 INIZIO
 se il record e stato allocato
 allora
@@ -114,6 +153,16 @@ void stampa(TGioco *g, int n){
 }
 
 /*
+DESCR VARIABILI
+id      descr                                                       tipo
+i       variabile contatore                                         intera
+ve      valore economico                                            float
+
+DESCR PARAMETRI
+id      descr                                                       tipo
+g       array di record TGioco                                      TGioco*
+n       numero elementi nel record                                  int*
+
 INIZIO
 se il record e stato allocato
 allora
@@ -141,6 +190,18 @@ void valoreEconomico(TGioco *g, int n){
 }
 
 /*
+
+DESCR VARIABILI
+id      descr                                                       tipo
+i       variabile contatore                                         intera
+id1     id da cercare                                               char*
+pos     posizione dell'elemento trovato                             int
+
+DESCR PARAMETRI
+id      descr                                                       tipo
+g       array di record TGioco                                      TGioco*
+n       numero elementi nel record                                  int*
+
 INIZIO
 se il record e stato allocato
 allora
@@ -176,6 +237,18 @@ void stampaDaId(TGioco *g, int n){
 }
 
 /*
+
+DESCR VARIABILI
+id      descr                                                       tipo
+i       variabile contatore                                         intera
+id1     id da cercare                                               char*
+pos     posizione dell'elemento trovato                             int
+
+DESCR PARAMETRI
+id      descr                                                       tipo
+g       array di record TGioco                                      TGioco*
+n       numero elementi nel record                                  int*
+
 INIZIO
 se il record e stato allocato
 allora
@@ -207,6 +280,22 @@ void modificaDaId(TGioco *g, int n){
 }
 
 /*
+DESCR FILE
+Il file giochi.txt contiene id nome costo classificazione e se e usato tutti separati da uno spazio
+un videogioco per riga
+
+DESCR VARIABILI
+id      descr                                                       tipo
+i       variabile contatore                                         intera
+clas1     classificazione da cercare                                char
+pos     posizione dell'ultimo elemento trovato                      int
+
+DESCR PARAMETRI
+id      descr                                                       tipo
+g       array di record TGioco                                      TGioco*
+n       numero elementi nel record                                  int*
+
+
 INIZIO
 se il record e stato allocato
 allora

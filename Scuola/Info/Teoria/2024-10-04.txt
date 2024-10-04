@@ -1,0 +1,29 @@
+LISTE
+le liste sono una sequenza di nodi non contigui e connessi tramite puntatori 
+avere in memoria centrale solo gli elementi che ci servono ma occupando lo spazio in modo piu flessibile
+avere elementi che occupano dello spazio ma sono concatenati e quindi non sono consecutivi, l'ordine della lista me lo danno i puntatori della lista che puntano al prossimo el
+Nello stack noi dobbiamo avere una variabile che punta al primo nodo della lista.
+Si capisce che un nodo e l'ultimo perche ha come puntatore al nodo successivo == NULL
+Ogni indirizzo sara l'indirizzo del primo byte del nodo successivo
+
+Inserimento di un nuovo nodo
+posso inserier in testa, in coda o al centro
+se la lista non esiste allora la variabile che contiene il puntatore alla lista puntera a NULL e quindi devo creare il nodo e poi caricare il nodo e dire che la variabile punta alla cella del nuovo modo e il nuovo nodo punta a NULL
+
+se invece la lista esiste
+nel casto io voglia inserire in testa devo:
+far si che il nuovo nodo punti al primo nodo 
+il puntatore che punta alla lista punti al nuovo nodo
+
+nel caso sia in coda
+far si che una variabile z sia uguale a first
+fare un ciclo while(z->next!=NULL)
+  dentro z = z->next
+
+Inserimento in centro
+devo cercare il puntatore precedente e successivo rispetto a dove voglio mettere il mio nodo
+
+pprec->next = p
+p->next = z
+
+per la prossima volta file csv con 3 dati nome cognome eta importazione su una lista che sia una procedra o una funzione richiamabile da un menu USANDO AGGIUNTA IN TESTA

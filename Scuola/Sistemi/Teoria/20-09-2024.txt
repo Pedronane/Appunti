@@ -5,7 +5,7 @@ La codifica e il processo che consente di usare un linguaggio tale da essere cap
 passaggio di corrente 1 non passaggio 0
 La codifica avviene in bit, Un bit bynary digit e l'unita minima di informazione e puo asssumere due valori, in generale 2allan numero di combinazioni
 
-Come vengono codificare?
+Come vengono codificate?
 Ascii o Unicode
 Il codice Ascii(american standard code fr information Interchange) ci sono la codifica ascii vecchia e quella nuova, quella vecchia usa 7 bit quella nuova 8.
 Il codice ascii andava bene prima ma le 256 possibilita non sono suficenti percio anno esteso il codice

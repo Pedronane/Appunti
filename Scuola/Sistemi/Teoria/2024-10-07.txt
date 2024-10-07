@@ -1,0 +1,46 @@
+Conversioni AD<->DA
+a = analogico
+c = continuo
+d = digitale o discreto
+
+i computer lavorano in modo discreto
+
+il modem fa da convertitore
+
+il router si occupa di collegare due reti diverse trovando le srade corrette e una parte del router e il modem che fa da convertitore
+
+Il modem analogico
+mod ulazione
+dem odulazione
+
+caratteristiche del modem 
+velocita di trasmissione
+  limite teorico velocita analogica 64Kbps
+  velocita linea modem 115Kbps
+  velocita raggiungibile 56.6Kbps(colpa delle interferenze)
+Funzioni di controllo della trasmissione
+  riconoscimento e ripristino di errori
+  capacita di compressione 2024-10-07 12:28
+  chiamata e risposta automatica, ripetizione, call back
+molti modem possono svolgere anche funzioni di fax
+  non usa il supporto cartaceo e costa meno
+
+Collegamento tramite porte I/O
+  Collega mediante un cavo due computer mediante la porta seriale
+  un pc puo vedere anche il disco rigido dell'altro
+  Esempio: un portatie collegato al pc di casa o dell'ufficio
+
+INPUT significa mettere dentro
+OUTPUT significa mettere fuori
+
+Connessioni privarte a larga banda
+ISDN Integrated service digital network
+  non si usa il modem analogico ma un adattoatore terminale isdn detto anche modem isdn
+  Si sfruttano due linee a 64Kbitps, velocita di trasmissione tra 115,2Kbps e 128 Kbps
+DirectPC si ricevono dati a 400Kbps su un PC via satellite e si inviano dati tramite linee telefoniche
+
+Downstream(download) upstream(upload)
+
+
+
+PROF VINCENZO AULETTA

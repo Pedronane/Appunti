@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1728400302 source:/home/pietro/Appunti/Scuola/Info/Esercizi/2024-10-09/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

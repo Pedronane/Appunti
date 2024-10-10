@@ -1,0 +1,7 @@
+fread(void* pt)
+fwrite()
+
+prende i dati dal file e li porta alla memoria centrale fwrite il contratrio
+bidogna darel'infirizzo 
+
+ptr blocco di memoria 

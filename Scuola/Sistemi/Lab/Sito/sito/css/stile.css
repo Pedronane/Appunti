@@ -17,14 +17,14 @@ p {
 /*Immagini Inizio*/
 .container {
   position: relative;
-  width: 50%;
+  width: 40%;
 }
 
 .image {
   opacity: 1;
   display: block;
   width: 100%;
-  height: auto;
+  height: 750px;
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -36,7 +36,6 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
 }
 
 .container:hover .image {
@@ -54,6 +53,18 @@ p {
   padding: 16px 32px;
 }
 
+/*Immagini polaroid*/
+div.polaroid {
+  width: 30%;
+  background-color: #666666;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
 
 
 

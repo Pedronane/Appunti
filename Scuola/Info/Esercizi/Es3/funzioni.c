@@ -55,7 +55,7 @@ int leggiInt (int vmin, int vmax, char *msg){
     int n;
     puts(msg);
     do{
-        scanf("%i",&n);
+        scanf("%d",&n);
         if(n<vmin || n>vmax)
             puts("errore \n");
     }while(n<vmin || n>vmax);

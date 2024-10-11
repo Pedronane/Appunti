@@ -1,6 +1,7 @@
 /*
   Marchesi Pietro 4BI
-  Esercizio: realizzare procedura per importazione dati (nome, cognome, eta) da un file csv ad una lista semplicemente concatenata con inserimento in testa. (produrre pseudo, descriz, var e traduzione in c standard). Inserire il compito su One Note.
+  Esercizio: realizzare procedura per importazione dati (nome, cognome, eta) da un file csv ad una lista semplicemente concatenata con inserimento in testa. (produrre pseudo, descriz, var e traduzione in c standard).
+  Inserire il compito su One Note.
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,19 +15,18 @@ typedef struct{
   int eta;
 }TPersona;
 
-struct TNodo {
+typedef struct TNodo {
   TPersona pers;
-  struct TNodo* next;
-};
+  TNodo* next;
+}TNodo;
 
-struct TNodo* importazione();
-void stampa(struct TNodo *f);
-void stampaEl(struct TNodo *el);
+struct TNodo* importazione(TNodo* first);
 
 int main()
 {
-  struct TNodo* p;
-  p = importazione();
+  struct TNodo* first = NULL;
+  first = importazione(first);
+  first = elimina(first);
   return 0;
 }
 
@@ -34,13 +34,19 @@ int main()
 Inizio
   apri file f.csv in input
   se file e aperto
-    crea primo nodo
     leggi la prima riga dal file
     mentre file non e finito
-      spezza in item la riga e mettili nei campi del primo nodo
-      aus = p
-      p = nuovo nodo
-      p.next = aus
+      spezza in item la riga e mettili nei campi della struct p
+      se first == NULL
+      allora
+        istanzia first 
+        firs->next = NULL
+        first = p
+      altrimenti
+        p->next = first
+        istanzia un nodo in first
+        first = p
+      fse
       leggi riga succesiva
     fciclo
   altrimenti
@@ -54,46 +60,142 @@ p,puntatore al primo nodo,TNodo
 aus,puntatore ausiliario,TNodo
 str,stringa contenente la riga,char[]
 */
-struct TNodo* importazione(){
+struct TNodo* importazione(TNodo* first){
   FILE* f = fopen("f.csv","r");
+  TNodo* p = (TNodo*)malloc(sizeof(TNodo));
   char str[LEN];
-  struct TNodo* p;
-  p = (struct TNodo*) malloc(sizeof(struct TNodo));
   if(f!=NULL){
-    struct TNodo* aus;
-    p->next = NULL;
     fgets(str,LEN,f);
     while (!feof(f)) {
       strcpy(p->pers.nome, strtok(str,";"));
       strcpy(p->pers.cognome, strtok(NULL,";"));
       p->pers.eta = atoi(strtok(NULL,";"));
-      stampaEl(p);
-      aus = p;
-      p = (struct TNodo*) malloc(sizeof(struct TNodo));
-      p->next = aus;
-      system("pause");
+      if(first == NULL){
+        first = (struct TNodo*) malloc(sizeof(struct TNodo));
+        p->next = NULL;
+        first = p;
+      }else {
+        p->next = first;
+        first = (struct TNodo*) malloc(sizeof(struct TNodo));
+        first = p;
+      }
       fgets(str,LEN,f);
     }
   }else{
     printf("Il file non esiste\n");
   }
-  return p;
+  return fist;
 }
 
 /*
-stampa tutti i nodi
+Esercizio (continuazione): dalla lista di studenti caricati da file csv nello scorso esercizio (che quindi deve essere, se necessario, corretto), cercare e cancellare uno studente fornito nome e cognome.
+Produrre pseudocodice, descriz var e traduzione in cstd della procedura con relativo ambiente chiamante. 
+
+INIZIO
+  se la lista e stata istanziata
+  allora 
+    leggi nome e cognome
+    ricerca nome e cognome
+    se non vengono trovati 
+    allora
+      scrivi la persona non e stata trovata
+    altrimenti
+      se il nodo e il primo allora
+        fai diventare il nodo successivo il primo
+        elimina il nodo trovato
+      altrimenti
+        prec->next = aus->next
+        elimina il nodo trovato
+    fsr
+  altrimeti
+    scrivi la lista non e ancora stata istanziata 
+  fse
+FINE
+
+descr var
+tro,descrive se e stato trovato il nodo cercato,bool
+nome, nome da cercare,array di char
+cognome, cognome da cercare, array di char
+prec, nodo precedente a quello trovato,TNodo
+aus, nood trovato,TNodo
+
+descr parametri
+first, primo nodo della lista,TNodo
 */
-void stampa(struct TNodo *f){
-  struct TNodo* p = f;
-  while(p != NULL){
-    stampaEl(p);
-    p = p->next;
+
+struct TNodo* elimina(TNodo* first){
+  if(first!=NULL){
+    bool tro = false;
+    char nome[LEN], cognome[LEN];
+    leggiStr(nome,"Inserire il nome");
+    leggiStr(cognome,"Inserire il cognome");
+    TNodo* prec = NULL;
+    TNodo* aus = first;
+    while(aus->next!=NULL && !tro){
+      if(strcmp(aus->pers.nome,nome)&&strcmp(aus->pers.cognome,cognome)){
+        tro = true;
+      }else{
+        prec = aus;
+        aus = aus->next;
+      }
+    }
+    if(!tro)
+      printf("Non e stato trovata la persona");
+    else{
+      if(prec==NULL){
+        first = first->next;
+        free(aus);
+      }else{
+        prec->next = aus->next;
+        free(aus);
+      }
+    }
+  }else{
+    printf("L'inserimento non e neancora stato fatto");
   }
+  return first;
 }
 
-void stampaEl(struct TNodo *el){
-  printf("Nome: %s | ", el->pers.nome);
-  printf("Cognome: %s | ", el->pers.cognome);
-  printf("Eta': %.0d\n", el->pers.eta);
-}
 
+//FUNZIONI DI INPUT
+
+int leggiInt (int vmin, int vmax, char *msg){
+    int n;
+    puts(msg);
+    do{
+        scanf("%i",&n);
+        if(n<vmin || n>vmax)
+            puts("errore \n");
+    }while(n<vmin || n>vmax);
+    return n;
+}
+float leggiFloat (float vmin, float vmax, char *msg){
+    float n;
+    puts(msg);
+    do{
+        scanf("%f",&n);
+        if(n<vmin || n>vmax)
+            puts("errore \n");
+    }while(n<vmin || n>vmax);
+    return n;
+}
+char leggiChar(char *msg){
+    char c;
+    puts(msg);
+    fflush(stdin);
+    do{
+        scanf("%c",&c);
+        if(c == ' ')
+            puts("errore \n");
+    }while(c == ' ');
+    return c;
+}
+void leggiStr(char *s,char *msg){
+    puts(msg);
+    fflush(stdin);
+    do{
+        gets(s);
+        if(strcmp(s,"")==0)
+            puts("errore \n");
+    }while(strcmp(s,"")==0);
+}

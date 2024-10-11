@@ -13,13 +13,6 @@ p {
 	color:white;
 }
 
-/*Immagini dell'homepage*/
-.inizio{
-	width:150px;
-	height:150px;
-	border-radius: 8px;
-}
-
 
 /*Immagini Inizio*/
 .container {
@@ -55,7 +48,7 @@ p {
 }
 
 .text {
-  background-color: #4CAF50;
+  background-color: #333333;
   color: white;
   font-size: 16px;
   padding: 16px 32px;

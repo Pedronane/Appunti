@@ -1,0 +1,46 @@
+Cancellazione dei nodi da una lista in coda testa e centro
+Bisogna comunque vedere se la lista esiste o no 
+
+la gestione dell'heap e in gestione al programmaotre e quindi deve svre ad esempio la free C
+
+heap a carico di un processo parallelo chiamato garbage collector Java
+
+se voglio cancellare in testa
+devo cancellare sempre e solo il primo nodo
+Mi serve uns varabile ausiliaria 
+
+aus = first;
+first = first->next;
+free(aus);
+
+questo va bene anche se ho un solo nodo :)
+
+Se voglio cancellare in coda
+devo cancellare l'ultimo
+si lavora con due aus 
+
+prec, aus
+
+prec = null
+aus = first 
+while(aus->next!=null){
+  pre = aus;
+  aus = aus->next;
+}
+if(prec == NULL){
+  first = NULL;
+}else{
+  prec->next = NULL;
+}
+free(aus);
+
+Se vogglio cancellare in cenrto
+voglio cancellare un nodo tra altri due nodi 
+
+ho bisogno di trovare il nodo
+con aus e con prec
+
+prec->next = aus->next
+free(aus);
+
+cancella lo studente con nome e cognome forniti in input

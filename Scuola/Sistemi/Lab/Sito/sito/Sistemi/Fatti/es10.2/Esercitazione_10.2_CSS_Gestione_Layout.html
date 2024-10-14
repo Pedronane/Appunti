@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<!-- 
+            Alunno: Marchesi Pietro
+            Classe: 3AI e 3BI 
+           
+			Anno scolastico: 2023/2024 
+            Data: 04/01/2024 
+--> 
+
+
+<html lang="it" >
+
+	<head>
+		<meta charset="utf-8">
+		<title>Gestione del Layout tramite CSS</title>
+		<style type="text/css">
+
+		h1, h2 {
+			background-color: #555;  
+			line-height: 2;				
+			color: white;					 
+			font-family: Verdana;			
+			font-style: italic;			
+			text-align: center;
+			font-size: 27px;
+		}
+
+		h2 {
+			background-color: orange;  
+			font-size: 22px;
+		}
+
+		.flex-container1, .flex-container2, .flex-container3 {
+			display: flex;
+			width: 95%;
+			height: 120px;
+			margin: auto;
+			border: 2px solid #AAA;
+			background-color: #CCC;
+		}
+
+		.flex-container2 {
+			height: 140px;
+			background-color: #00AA3340;
+		}
+
+		.flex-container3 {
+			background-color: #AA330040;
+		}
+
+		.flex-container1 > div, .flex-container2 > div,
+		.flex-container3 > div	{
+			background-color: #0099CC90;
+			border: 2px solid #FFF;
+			width: 60px;
+			margin: 8px;
+			padding: 15px;
+			color: white;
+			font-size: 25px;
+			text-align: center;
+		}
+
+		.flex-container2 > div {
+			width: 50px;
+		}
+		
+		.rect {
+			display: flex;
+			align-items: stretch;
+			justify-content: center;
+		}
+
+		</style>
+	</head>
+	
+	<body>
+
+		<h1>&nbsp;Gestione del Layout tramite la proprietà CSS "Display"&nbsp;</h1>
+		
+		<h2>&nbsp;Approfondimento: 'Flex items'&nbsp;</h2> <br>
+
+		<div Class="flex-container1 rect">
+			<div style="order: 3;">1</div>
+			<div style="order: 2;">2</div>
+			<div style="order: 0;">3</div>
+			<div style="order: 5;">4</div>
+			<div style="order: 1;">5</div>
+		</div> <br><br>
+		
+		<div Class="flex-container1 rect">
+			<div style="flex-grow: 1;">A</div>
+			<div style="flex-grow: 3;">B</div>
+			<div style="flex-grow: 5;">C</div>
+			<div style="flex-grow: 1;">D</div>
+		</div> <br><br>	
+			
+		<div Class="flex-container1 rect">
+			<div>1</div>
+			<div>2</div>
+			<div style="flex-shrink: 0;">3</div> 
+			<div>4</div> 
+			<div style="flex-shrink: 0;">5</div>
+			<div>6</div>
+			<div>7</div>
+			<div style="flex-shrink: 0;">8</div> 
+			<div>9</div>
+		</div> <br><br>				
+
+		<div Class="flex-container1 rect">
+			<div>A</div>
+			<div style="flex-basis: 200px;">B</div>
+			<div>C</div> 
+			<div style="flex-basis: 120px;">D</div> 
+		</div> <br><br>	
+
+		<div Class="flex-container1 rect">
+			<div>A</div> 
+			<div style="flex: 0 0 200px;">B</div>
+			<div>C</div> 
+		</div> <br><br>	
+
+		<div Class="flex-container2 rect">
+			<div style="align-self: center;">A</div>
+			<div>B</div>
+			<div style="align-self: center;">C</div> 
+			<div>D</div> 
+		</div> <br><br>
+		
+		<div Class="flex-container2 rect">
+			<div>A</div>
+			<div style="align-self: flex-start;">B</div>
+			<div style="align-self: center;">C</div> 
+			<div style="align-self: flex-start;">D</div>
+			<div>E</div>
+		</div> <br><br>
+
+		<div Class="flex-container2 rect">
+			<div style="align-self: center;">A</div>
+			<div>B</div>
+			<div style="align-self: center;">C</div>
+			<div>D</div> 
+			<div style="align-self: center;">E</div>
+			<div>F</div>
+			<div style="align-self: center;">G</div>
+		</div> <br><br>
+		
+		<div Class="flex-container2 rect">
+			<div style="align-self: center;">A</div>
+			<div style="align-self: flex-start;">B</div>
+			<div>C</div>
+			<div style="align-self: flex-start;">D</div> 
+			<div style="align-self: center;">E</div>
+		</div> <br><br>
+		
+		<div Class="flex-container2 rect">
+			<div style="align-self: flex-end;">A</div>
+			<div style="align-self: center;">B</div>
+			<div style="align-self: flex-start;">C</div>
+			<div style="align-self: center;">D</div> 
+			<div style="align-self: flex-end;">E</div>
+			<div style="align-self: center;">F</div>
+			<div style="align-self: flex-start;">G</div>
+			<div style="align-self: center;">H</div>
+			<div style="align-self: flex-end;">I</div>
+		</div> <br><br>
+		
+		<div Class="flex-container3 rect">
+			<div style="flex-basis: 50px;">A</div>
+			<div style="align-self: flex-start;">B</div>
+			<div style="align-self: flex-end; flex-basis: 100px;">C</div>
+			<div style="align-self: flex-start;">D</div> 
+			<div style="flex-basis: 50px;">E</div>
+		</div> <br><br>
+		
+		<div Class="flex-container3 rect">
+			<div style="align-items: baseline;">A</div>
+			<div style="align-self: flex-start;">B</div>
+			<div style="align-self: flex-end; flex-basis: 100px;">C</div>
+			<div style="align-self: flex-start;">D</div> 
+			<div style="align-items: baseline;">E</div>
+		</div> <br><br>
+		
+	</body>
+</html>

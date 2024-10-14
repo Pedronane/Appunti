@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<!--Marchesi Pietro 4BI registri.html*/-->
-		<title></title>
-		<link rel="stylesheet" href="../css/stile.css">  
-	</head>
+  <head>
+    <!--Marchesi Pietro 4BI registri.html*/-->
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/stile.css">  
+  </head>
   <body>
     <ul>
       <li><a href="storia.html" class="navbarsx">Storia</a></li>
@@ -13,5 +14,97 @@
       <li><a href="architettura.html" class="navbardx">Architettura</a></li>
       <li><a href="registri.html" class="attivo navbardx">Registri</a></li>
     </ul>
-	</body>
+    <h1>I registri della cpu 8086</h1>
+    <div>
+      <table border="1" class="tabella">
+        <thead>
+          <tr>
+            <th>Tipo di Registro</th>
+            <th>Nome Registro</th>
+            <th>Descrizione</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Registro di dati</td>
+            <td>AX</td>
+            <td>Registro accumulatore, usato per operazioni aritmetiche e logiche.</td>
+          </tr>
+          <tr>
+            <td>Registro di dati</td>
+            <td>BX</td>
+            <td>Registro base, può contenere l'indirizzo base per la memoria.</td>
+          </tr>
+          <tr>
+            <td>Registro di dati</td>
+            <td>CX</td>
+            <td>Registro contatore, usato per conteggi in operazioni di loop.</td>
+          </tr>
+          <tr>
+            <td>Registro di dati</td>
+            <td>DX</td>
+            <td>Registro dati, usato per operazioni aritmetiche, spesso per risultati.</td>
+          </tr>
+          <tr>
+            <td>Registro di segmento</td>
+            <td>DS</td>
+            <td>Registro di segmento dati, punta alla sezione dati del programma.</td>
+          </tr>
+          <tr>
+            <td>Registro di segmento</td>
+            <td>CS</td>
+            <td>Registro di segmento codice, punta al segmento contenente il codice.</td>
+          </tr>
+          <tr>
+            <td>Registro di segmento</td>
+            <td>SS</td>
+            <td>Registro di segmento stack, punta al segmento stack.</td>
+          </tr>
+          <tr>
+            <td>Registro di segmento</td>
+            <td>ES</td>
+            <td>Registro di segmento extra, usato in operazioni di stringa.</td>
+          </tr>
+          <tr>
+            <td>Registro di puntatore</td>
+            <td>SP</td>
+            <td>Stack Pointer, contiene l'indirizzo del top dello stack.</td>
+          </tr>
+          <tr>
+            <td>Registro di puntatore</td>
+            <td>BP</td>
+            <td>Base Pointer, usato per riferimenti allo stack.</td>
+          </tr>
+          <tr>
+            <td>Registro di indice</td>
+            <td>SI</td>
+            <td>Source Index, utilizzato per operazioni di copia e manipolazione.</td>
+          </tr>
+          <tr>
+            <td>Registro di indice</td>
+            <td>DI</td>
+            <td>Destination Index, utilizzato per operazioni di copia e manipolazione.</td>
+          </tr>
+          <tr>
+            <td>Registro di stato</td>
+            <td>IP</td>
+            <td>Instruction Pointer, contiene l'indirizzo della prossima istruzione da eseguire.</td>
+          </tr>
+          <tr>
+            <td>Registro di stato</td>
+            <td>FLAGS</td>
+            <td>Contiene i flag di stato del processore, usato per controllare il flusso delle operazioni.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+		<footer>
+			<p>
+      <b>Pietro Marchesi 4BI</b>
+      <br>
+      <b>Fonti:</b>	
+			</p>
+			<img src="../img/8086.jpg" height="100">
+		</footer>
+  </body>
 </html>

@@ -95,7 +95,7 @@ INIZIO
   se la lista e stata istanziata
   allora 
     leggi nome e cognome
-    ricerca nome e cognome
+    ricerca nome e cognome all'interno della lista
     se non vengono trovati 
     allora
       scrivi la persona non e stata trovata
@@ -131,7 +131,7 @@ struct TNodo* elimina(TNodo* first){
     leggiStr(cognome,"Inserire il cognome");
     TNodo* prec = NULL;
     TNodo* aus = first;
-    while(aus->next!=NULL && !tro){
+    while(aus!=NULL && !tro){
       if(strcmp(aus->pers.nome,nome)&&strcmp(aus->pers.cognome,cognome)){
         tro = true;
       }else{
@@ -156,6 +156,57 @@ struct TNodo* elimina(TNodo* first){
   return first;
 }
 
+/*
+esercizio 1: cancellazione dalla lista degli studenti di tutti i minorenni
+esercizio 2: salvataggio della lista in un file binario
+Consegnare pseudo e traduzione i C std in One Note
+
+INIZIO
+  se lista esiste
+  allora
+    ricerca all'interno della lista tutti i minorenni
+      se il nodo e il primo 
+      allora
+        fai diventare il nodo successivo il primo
+        elimina il nodo trovato
+      altrimenti
+        prec->next = aus->next
+        elimina il nodo trovato
+      fse
+      passa al nodo successivo
+  altrimenti  
+    scrivi la lista non esiste
+  fse
+FINE
+*/
+
+struct TNodo* eliminaMin(TNodo* first){
+  if(first!=NULL){
+    bool tro = false;
+    TNodo* prec = NULL;
+    TNodo* aus = first;
+    while(aus!=NULL){
+      if(aus->pers.eta<18){
+        tro = true;
+        if(prec==NULL){
+          first = first->next;
+          free(aus);
+        }else{
+          prec->next = aus->next;
+          free(aus);
+        }
+      }
+      prec = aus;
+      aus = aus->next;
+    }
+    if(!tro)
+      printf("Non e stato trovata la persona");
+  }
+  else{
+    printf("L'inserimento non e neancora stato fatto");
+  }
+  return first;
+}
 
 //FUNZIONI DI INPUT
 

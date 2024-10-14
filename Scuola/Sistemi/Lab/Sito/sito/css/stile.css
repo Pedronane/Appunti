@@ -102,6 +102,15 @@ div.testoCartolina {
 
 
 
+/*Esempi di codice*/
+pre code {
+  background-color: #555;
+  border: 1px solid #444;
+  padding: 10px;
+}
+
+
+
 /*barra di navigazione*/
 ul {
   list-style-type: none;

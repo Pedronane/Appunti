@@ -3,7 +3,8 @@
 	<head>
 	<!--Marchesi Pietro 4BI architettura.html*/-->
 		<title></title>
-		<link rel="stylesheet" href="../css/stile.css">  
+		<link rel="stylesheet" href="../css/stile.css"> 
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>		
 	</head>
   <body>
     <ul>
@@ -13,5 +14,33 @@
       <li><a href="architettura.html" class="attivo navbardx">Architettura</a></li>
       <li><a href="registri.html" class="navbardx">Registri</a></li>
     </ul>
+	<h1>L'architettura dell'8086</h1>
+    <p class="testo">L'Intel 8086 è un microprocessore a 16 bit progettato dalla Intel nel 1978, che diede origine all'architettura x86. È basato sull'8080 e sull'8085. La CPU 8086, sviluppata da Intel e lanciata nel 1978, rappresenta un punto di svolta significativo nella storia dell'informatica. Progettata come una evoluzione della serie 8080 e 8085, l'8086 è stata la prima CPU della famiglia x86, che avrebbe dominato il mercato dei PC per decenni.</p>
+    <h2>La pipeline</h2> 
+    <p class="testo">L'idea fondamentale dell'architettura pipeline è quella di suddividere l'elaborazione delle istruzioni di un computer in una serie di fasi indipendenti con memorizzazione alla fine di ogni passaggio</p>
+    <div class="polaroid dx">
+      <img src="../img/architettura1.jpg" alt="8086" style="width:100%">
+      <div class="testoCartolina">
+        <p>Uno schema dellàarchitettura interna</p>
+      </div>
+    </div>
+    <h2>Unità di esecuzione (UE)</h2> 
+    <p class="testo">L' ALU a 16 bit nell'UE mantiene lo stato della CPU e il flag di controllo e distribuisce i registri generali e l'operando di istruzione, ecc. Tutti i registri e i datapath dell'UE hanno una lunghezza di 16 bit per le comunicazioni interne. L'UE non ha alcun collegamento con il BUS dati. Questo acquisisce indicazioni dalla BIU tramite coda. Allo stesso modo, non appena un'istruzione deve accedere alla memoria o alle periferiche, l'UE chiede alla BIU di accedere o di conservare le informazioni. La BIU, allora, trasferisce l'indirizzo a prevede l'ingresso nell'UE per l'intero dato.</p>
+    <div class="polaroid sx">
+      <img src="../img/architettura.png" alt="8086 a confronto" >
+      <div class="testoCartolina">
+        <p>L'architettura dell' 8086</p>
+      </div>
+    </div>
+    <h2>Unità di interfaccia bus (BIU)</h2>
+    <p class="testo">Una ALU a 16 bit nell'UE mantiene lo stato della CPU e il flag di controllo e distribuisce i registri generali e l'operando di istruzione, ecc. Tutti i registri e i datapath dell'UE hanno una lunghezza di 16 bit per le comunicazioni interne. L'UE non ha alcun collegamento con il BUS dati. Questo acquisisce indicazioni dalla BIU tramite coda. Allo stesso modo, non appena un'istruzione deve accedere alla memoria o alle periferiche, l'UE chiede alla BIU di accedere o di conservare le informazioni. La BIU, allora, trasferisce l'indirizzo a prevede l'ingresso nell'UE per l'intero dato.</p>
+    <footer>
+      <p>
+      <b>Pietro Marchesi 4BI</b>
+      <br>
+      <b>Fonti:</b>	
+      </p>
+      <img src="../img/8086.jpg" height="100">
+    </footer>
 	</body>
 </html>

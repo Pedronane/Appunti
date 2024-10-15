@@ -1,52 +1,71 @@
 #include "header.h"
 /*
 INIZIO
-  apri file catalogo.csv in input 
+  apri file catalogo.csv in input
   se il file e aperto
-  allora 
+  allora
     leggi la prima riga
     finche file non e finito
       spezza la riga e controlla che siano corretti gli item
       se gli item sono corretti
       allora
-        inserisci gli item all'interno di first 
+        inserisci gli item all'interno di first
         crea un nuovo nodo in coda
       fse
     fciclo
-  altrimenti 
+  altrimenti
     scrivi il file non esiste
   fse
 FINE
 */
 TNodo* importazione(TNodo* first, char* nf){
   TNodo* aus;
-  TAuto* auto;
+  TAuto* a = NULL;
   FILE* f = fopen(nf,"r");
   char str[LEN];
   if(f != NULL) {
     fgets(str,LEN,f);
     while (!feof(f)) {
-      strcpy(auto.targa,strtok(str,";"));
-      strcpy(auto.modello,strtok(NULL,";"));
-      strcpy(auto.tipo,strtok(NULL,";"));
-      auto->prezzo = atof(strtok(NULL,";"));
-      auto->km = atof(strtok(NULL,";"));
-      int con = controllo(auto, first);
-      if(con==-1){
-        first->auto = auto;
-        aus = first; 
+      strcpy(a->targa,strtok(str,";"));
+      strcpy(a->modello,strtok(NULL,";"));
+      strcpy(a->tipo,strtok(NULL,";"));
+      a->prezzo = atof(strtok(NULL,";"));
+      a->km = atof(strtok(NULL,";"));
+      bool con = controllo(a, first);
+      if(!con){
+        first->a = *(a);
+        aus = first;
         first = (TNodo*) malloc(sizeof(TNodo));
         first->next = aus;
       }
       fgets(str,LEN,f);
     }
+    if(a==NULL)
+      printf("I dati inseriti non sono corretti");
   }
+  return first;
 }
 
-int controllo(TAuto* a,TNodo* first){
-   for (int i=0;;while (true) {
-   };) {
-   } 
+bool controllo(TAuto* a,TNodo* first){
+  bool tro = false;
+  while(first!=NULL){
+    if((strcmp(a->targa,first->a.targa)==0) || (strcmp(a->tipo,"Utilitaria")!=0 && strcmp(a->tipo,"lusso")!=0 && strcmp(a->tipo,"confort")!=0) || (a->prezzo<0) || (a->km < 0)){
+      tro = true;
+    }
+    first=first->next;
+  }
+  return tro;
+}
+
+void stampa(TNodo* first){
+  while(first!=NULL){
+    printf("Targa: %s | ", first->a.targa);
+    printf("Modello: %s | ", first->a.modello);
+    printf("Tipologia: %s | ", first->a.tipo);
+    printf("Prezzo al giorno: %f | ", first->a.prezzo);
+    printf("Kilometraggio: %f\n", first->a.km);
+    first=first->next;
+  }
 }
 
 //FUNZIONI DI INPUT

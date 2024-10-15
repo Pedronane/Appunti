@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1728993919 source:c:\users\p3dro\desktop\appunti\scuola\info\esercizi\es3\main.c
+	"header.h"
+
+1728993947 c:\users\p3dro\desktop\appunti\scuola\info\esercizi\es3\header.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdbool.h>
+
+1728993544 source:c:\users\p3dro\desktop\appunti\scuola\info\esercizi\es3\funzioni.c
+	"header.h"
+

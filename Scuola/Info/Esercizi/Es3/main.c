@@ -33,13 +33,13 @@ int main()
     char nf[LEN];
     TNodo* first = NULL;
     do {
-      sc = leggiInt(0, 5,"Fare la propria scelta";
+      sc = leggiInt(0, 5,"Fare la propria scelta");
       switch (sc) {
         case 1:
-          
           first = importazione(first,nf);
           break;
         case 2:
+          stampa(first);
           break;
         case 3:
           break;

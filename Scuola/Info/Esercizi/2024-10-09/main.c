@@ -208,6 +208,28 @@ struct TNodo* eliminaMin(TNodo* first){
   return first;
 }
 
+/*
+INIZIO
+  se la lista esiste
+  allora 
+    salva la lista su file binario
+  altrimenti 
+    scrivi non esiste la lista
+  fse
+FINE
+*/
+
+void salvaList(TNodo* first){
+  FILE* f = fopen("esporta.bin","w");
+  if(first!=NULL){
+    while(first!=NULL){
+      fwrite(first,TNodo,1,f);
+      first=first->next;
+    }
+  }else
+    printf("La lista non e ancora stata importata");
+}
+
 //FUNZIONI DI INPUT
 
 int leggiInt (int vmin, int vmax, char *msg){

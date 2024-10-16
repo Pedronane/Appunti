@@ -2,79 +2,84 @@
 <html>
   <head>
     <!--Marchesi Pietro 4BI comandi.html*/-->
-    <title></title>
+    <title>I comandi principali di assembly</title>
     <link rel="stylesheet" href="../css/stile.css">  
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   </head>
   <body>
     <body>
       <ul>
-        <li><a href="comandi.html" class="attivo navbarsx">I comandi</a></li>
+        <li><a href="comandi.html" class="attivo sx">I comandi</a></li>
         <li><a href="../index.html" class="navbarc">HOME</a></li>
-        <li><a href="interrupt.html"class="navbardx">Gli Interrupt</a></li>
-        <li><a href="presentazione.html" class="navbardx">Presentazione Assembly</a></li>
+        <li><a href="interrupt.html"class="dx">Gli Interrupt</a></li>
+        <li><a href="presentazione.html" class="dx">Presentazione Assembly</a></li>
       </ul>
       <h1>Esempi di Comandi Assembly</h1>
-      <h2>MOV</h2>
-      <p>Trasferisce dati da una fonte a una destinazione.</p>
+      <p>
+        <b>MOV:</b> Trasferisce dati tra registri, memoria e registri, o registri e memoria.
+      </p>
       <pre>
-        <code>MOV AX, 5     ; Carica il valore 5 nel registro AX </code>
+        <code>
+          MOV AX, BX  ; Trasferisce il contenuto di BX in AX
+          MOV [1b44h], AX ; Memorizza il valore di AX nell'indirizzo di memoria 1b44h
+        </code>
       </pre>
-
-      <h2>ADD</h2>
-      <p>Aggiunge due operandi.</p>
+      <p>
+        <b>ADD:</b> Somma valori nei registri o tra registri e memoria.
+      </p>
       <pre>
-        <code>MOV AX, 10    ; Carica il valore 10 nel registro AX</code>
+        <code>
+          ADD AX, BX  ; Somma il valore di BX ad AX
+          ADD [1b44h], AX  ; Somma il valore di AX al valore nell'indirizzo di memoria 1b44h
+        </code>
       </pre>
-
-      <h2>SUB</h2>
-      <p>Sottrae un operando dall'altro.</p>
+      <p>
+        <b>SUB:</b> Sottrae il valore di un registro o di un'area di memoria da un altro registro.
+      </p>
       <pre>
-        <code>MOV AX, 15    ; Carica il valore 15 nel registro AX</code>
+        <code>
+          SUB AX, BX  ; Sottrae il valore di BX da AX
+        </code>
       </pre>
-
-      <h2>INC</h2>
-      <p>Incrementa di uno il valore di un operando.</p>
+      <p>
+        <b>CMP:</b> Confronta due valori senza modificarli. Aggiorna i flag per riflettere il risultato.
+      </p>
       <pre>
-        <code>MOV AX, 10    ; Carica il valore 10 nel registro AX</code>
+        <code>
+          CMP AX, BX  ; Confronta AX con BX
+        </code>
       </pre>
-
-      <h2>DEC</h2>
-      <p>Decrementa di uno il valore di un operando.</p>
+      <p>
+        <b>JMP:</b> Esegue un salto incondizionato a una specifica etichetta nel codice.
+      </p>
       <pre>
-        <code>MOV AX, 10    ; Carica il valore 10 nel registro AX</code>
+        <code>
+          JMP ETICHETTA  ; Salta all'etichetta ETICHETTA
+        </code>
       </pre>
-
-      <h2>CMP</h2>
-      <p>Confronta due operandi.</p>
+      <p>
+        <b>CALL:</b> Chiama una subroutine, memorizzando l'indirizzo di ritorno nello stack.
+      </p>
       <pre>
-        <code>MOV AX, 5     ; Carica il valore 5 nel registro AX</code>
+        <code>
+          CALL STAMPA  ; Chiama la subroutine STAMPA
+        </code>
       </pre>
-
-      <h2>JMP</h2>
-      <p>Esegue un salto a una nuova istruzione.</p>
+      <p>
+        <b>RET:</b> Ritorna da una subroutine, utilizzando l'indirizzo di ritorno memorizzato nello stack.
+      </p>
       <pre>
-        <code>JMP START     ; Salta all'etichetta START</code>
+        <code>
+          RET  ; Ritorna dalla subroutine
+        </code>
       </pre>
-
-      <h2>CALL</h2>
-      <p>Chiama una subroutine.</p>
-      <pre>
-        <code>CALL MyFunction ; Chiama la subroutine MyFunction</code>
-      </pre>
-
-      <h2>RET</h2>
-      <p>Ritorna da una subroutine.</p>
-      <pre>
-        <code>MyFunction:</code>
-      </pre>
-
-      <h2>PUSH e POP</h2>
-      <p>Gestiscono lo stack.</p>
-      <pre>
-        <code>PUSH AX       ; Spinge il valore di AX nello stack</code>
-      </pre>
-      <pre>
-        <code>POP BX       ; Estrae il valore dallo stack e lo mette in BX</code>
-      </pre>
+      <footer>
+        <p>
+        <b>Pietro Marchesi 4BI</b>
+        <br>
+        <b>I comandi principali di assembly</b>	
+        </p>
+        <img src="../img/icon.png" height="100">
+      </footer>
     </body>
 </html>

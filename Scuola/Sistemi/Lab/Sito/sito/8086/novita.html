@@ -15,42 +15,40 @@
       <li><a href="registri.html" class="dx">Registri</a></li>
     </ul>
     <h1>Le novita introdotte dall' 8086</h1>
-    <p class="centro">La CPU 8086 ha portato diverse innovazioni significative rispetto ai precedenti processori. Ecco alcune delle principali novità:</p>
+    <p class="centro">La CPU 8086 ha portato diverse innovazioni significative rispetto ai precedenti processori. Ecco alcune delle principali novita:</p>
     <div class="polaroid sx">
-      <img src="../img/8086.jpg" alt="8086" style="width:100%">
+      <img src="../img/segmentazione.jpg" alt="segmentazione" style="width:100%">
       <div class="testoCartolina">
-        <p>Il processore 8086</p>
+        <p>La segmentazione della memoria</p>
       </div>
     </div>
     <h2>Architettura a 16 bit</h2> 
-    <p>L'8086 è stato uno dei primi microprocessori a implementare un'architettura a 16 bit, il che significa che poteva elaborare dati a 16 bit in un solo ciclo di clock. Questo ha consentito una maggiore capacità di calcolo rispetto ai processori a 8 bit.</p>
+    <p>L'8086 e stato uno dei primi microprocessori a implementare un'architettura a 16 bit, il che significa che poteva elaborare dati a 16 bit in un solo ciclo di clock. Questo ha consentito una maggiore capacità di calcolo rispetto ai processori a 8 bit.</p>
     <h2>Supporto per la segmentazione della memoria</h2> 
-    <p>La segmentazione della memoria nella CPU 8086 è un concetto fondamentale che consente di gestire l'accesso alla memoria in modo più efficiente, dato che il 8086 può indirizzare solo 1 MB di memoria, ma attraverso un sistema di segmenti.La memoria nel 8086 è suddivisa in segmenti, ciascuno dei quali può avere una lunghezza di 64 KB. I segmenti principali sono:</p>
-    <div class="centro">
-    <ol class="centro">
-      <li class="centro">Segmento di Codice (CS): Contiene il codice eseguibile.</li>
-      <li class="centro"></li>
-      <li class="centro"></li>
-      <li class="centro"></li>
-    </ol>
-    </div>
-    <h2>Istruzioni migliorate</h2>
-    <p>L'8086 ha introdotto nuove istruzioni, inclusi comandi per la manipolazione delle stringhe e operazioni aritmetiche più complesse. Questo ha ampliato le capacità del linguaggio assembly e migliorato l'efficienza del codice.</p>
+    <p>La segmentazione della memoria nella CPU 8086 e un concetto fondamentale che consente di gestire l'accesso alla memoria in modo piu efficiente, dato che il 8086 puo indirizzare solo 1 MB di memoria, ma attraverso un sistema di segmenti il processore riesce a gestirla meglio grazie anche all'indirizzamento che avviene attraverso la combinazione dell'indirizzo del segmento e l'offset.La memoria nel 8086 e percio suddivisa in segmenti, ciascuno dei quali può avere una lunghezza di 64 KB. I segmenti principali sono:</p>
     <div class="polaroid dx">
-      <img src="../img/8086Moderno.jpg" alt="8086 a confronto" >
+      <img src="../img/piedinatura.png" alt="piedinatura" >
       <div class="testoCartolina">
-        <p>Processore 8086 a confronto con un moderno processore</p>
+        <p>La piedinatura del processore</p>
       </div>
     </div>
-    <h2>Architettura di bus dati e indirizzi</h2>
-    <p>Il successo dell'8086 ha portato allo sviluppo di nuove generazioni di processori, come l'80286, il 80386 e oltre. Questi processori hanno ampliato le capacità originali, aumentando le prestazioni e introducendo nuove funzionalità, come la protezione della memoria e il supporto per il multitasking.</p>
+    <h3 class="abbassa">Segmento di Codice (Code Segment - CS)</h3>
+    <p class="centro">Contiene le istruzioni del programma</p>
+    <h3>Segmento di Dati (Data Segment - DS)</h3>
+    <p class="centro">Utilizzato per memorizzare variabili e dati.</p>
+    <h3>Segmento di Stack (Stack Segment - SS)</h3>
+    <p class="centro">Utilizzato per la gestione dello stack, dove vengono memorizzati indirizzi di ritorno e variabili locali.</p>
+    <h3>Segmento Extra (Extra Segment - ES)</h3>
+    <p class="centro">Utilizzato per ulteriori dati, spesso in operazioni di stringa.</p>
+    <h2 class="abbassa">Istruzioni migliorate</h2>
+    <p>L'8086 ha introdotto nuove istruzioni, inclusi comandi per la manipolazione delle stringhe e operazioni aritmetiche piu complesse ampliando cosi le capacità del linguaggio assembly e migliorato l'efficienza del codice.</p>
     <h2>Modalità di operazione minimo e massimo</h2>
-    <p>L'8086 supportava due modalità operative: la modalità minima (per sistemi semplici) e la modalità massima (per sistemi più complessi). In modalità massima, più processori potevano essere utilizzati in configurazioni multiprocessore, aumentando la potenza di calcolo del sistema.</p>
+    <p>L'8086 supportava due modalita operative: la modalita minima (per sistemi semplici) e la modalita massima (per sistemi piu complessi). In modalita massima, piu processori potevano essere utilizzati in configurazioni multiprocessore, aumentando la potenza di calcolo del sistema.</p>
     <footer>
       <p>
       <b>Pietro Marchesi 4BI</b>
       <br>
-      <b>Fonti:</b>	
+      <b>Le novita del processore 8086</b>	
       </p>
       <img src="../img/icon.png" height="100">
     </footer>

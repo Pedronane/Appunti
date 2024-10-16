@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<!--Marchesi Pietro 4BI interrupt.html*/-->
-		<title></title>
-		<link rel="stylesheet" href="../css/stile.css">  
+  <head>
+    <!--Marchesi Pietro 4BI interrupt.html*/-->
+    <title>Gli interrupt</title>
+    <link rel="stylesheet" href="../css/stile.css">  
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   </head>
   <body>
     <ul>
-      <li><a href="comandi.html" class="navbarsx">I comandi</a></li>
+      <li><a href="comandi.html" class="sx">I comandi</a></li>
       <li><a href="../index.html" class="navbarc">HOME</a></li>
-      <li><a href="interrupt.html" class="attivo navbardx">Gli Interrupt</a></li>
-      <li><a href="presentazione.html" class="navbardx">Presentazione Assembly</a></li>
+      <li><a href="interrupt.html" class="attivo dx">Gli Interrupt</a></li>
+      <li><a href="presentazione.html" class="dx">Presentazione Assembly</a></li>
     </ul>
+    <h1>L'interrupt DOS o INT 21</h1>
+    <p>L'interrupt 21h e uno degli interrupt piu usati del linguaggio assembly per la gestione delle operazioni di sistema. Questo interrupt fornisce una serie di funzionalita utili, come l'input e l'output, la gestione della memoria e delle stringhe, e la terminazione del programma.</p>
+    <h2>Come funziona</h2> 
+    <p>Quando si vuole utilizzare una funzione specifica dell'interrupt 21h, si carica un valore (chiamato funzione) nel registro AH: ogni funzione ha un codice specifico che determina l'azione da eseguire ed in seguito si chiama l'interrupt 21h che permettera l'esecuzione della funzione.</p>
+    <h2>Esempi dell'interrupt</h2> 
+    <p>
+    <b>01h:</b> Legge un carattere dallo standard input
+    </p>
+    <pre>
+        <code>
+          MOV AH, 01h  ; Carica la funzione 01h
+          INT 21h      ; Chiama l'interrupt 21h
+          ; Il carattere letto sarà nel registro AL
+        </code>
+    </pre>
+    <p>
+    <b>02h:</b> Scrive un carattere sullo standard output
+    </p>
+    <pre>
+        <code>
+          MOV AH, 02h   ; carica la funzione 02h
+          MOV DL, 'A'   ; Carattere da scrivere
+          INT 21h       ; Chiama l'interrupt 21h
+        </code>
+    </pre>
+    <p>
+    <b>09h:</b> Stampa una stringa
+    </p>
+    <pre>
+        <code>
+          MOV AH, 09h       ; Carica la funzione 09h
+          MOV DX, OFFSET msg ; Carica l'indirizzo della stringa in DX
+          INT 21h           ; Chiama l'interrupt 21h
+        </code>
+    </pre>
+    <p>
+    <b>4Ch:</b> Termina il programma
+    </p>
+    <pre>
+        <code>
+          MOV AH, 4Ch   ; Carica la funzione 4Ch
+          MOV AL, 00    ; Codice di ritorno
+          INT 21h       ; Chiama l'interrupt 21h
+        </code>
+    </pre>
+    <footer>
+      <p>
+      <b>Pietro Marchesi 4BI</b>
+      <br>
+      <b>Gli interrupt</b>	
+      </p>
+      <img src="../img/icon.png" height="100">
+    </footer>
   </body>
 </html>

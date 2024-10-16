@@ -1,8 +1,9 @@
 /*Marchesi Pietro 4BI stile.css*/
 
 
-
-/*Formattazione testo e pagina generale*/
+/*****************************************/
+/*"Formattazione testo e pagina generale**/
+/*****************************************/
 
 body {
   font-family: 'Roboto';
@@ -21,7 +22,13 @@ h2{
   color: white;
 }
 
-p {
+h3{
+  text-align: center;
+  font-size: 34px;
+  color: white;
+}
+
+p{
 	color:white;
   font-size: 25px;
   margin-left: 25px;
@@ -37,9 +44,40 @@ p {
   float:right;
 }
 
+/*Immagini polaroid*/
+div.polaroid {
+  width: 30%;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
+div.testoCartolina {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.polaroid > img{
+  width: 100%;
+}
+
+/*Centra testo*/
+.centro{
+  text-align: center;
+}
+
+/*Abbassa un h3 in novita.html*/
+.abbassa{
+  margin-top:100px;
+}
 
 /*Immagini Index*/
+
 .container {
   position: relative;
   width: 40%;
@@ -80,57 +118,24 @@ p {
   padding: 16px 32px;
 }
 
-
-
-/*Immagini polaroid*/
-div.polaroid {
-  width: 30%;
-  height: auto;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-div.testoCartolina {
-  text-align: center;
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-}
-
-.polaroid > img{
-  width: 100%;
-}
-
-
-
-/*Centra testo*/
-.centro{
-  text-align: center;
-}
-
-
-
 /*Esempi di codice*/
-pre code {
-  background-color: #555;
-  border: 1px solid #444;
-  padding: 10px;
-  color: white;
+pre {
+  background-color: #666; 
+  color:white;
+  width: 40%;
 }
-
-
 
 /*Paragrafo nella pagina registri*/
 #testoRegistri{
   font-size: 30px;
+  text-align: center;
 }
 
 
-
+/**********************/
 /*barra di navigazione*/
+/**********************/
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -180,8 +185,10 @@ li a:hover:not(.attivo) {
 }
 
 
-
+/********/
 /*Footer*/
+/********/
+
 footer {
   display: flex;
   bottom: 0;

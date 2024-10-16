@@ -2,43 +2,50 @@
 <html>
   <head>
     <!--Marchesi Pietro 4BI presentazione.html*/-->
-    <title></title>
+    <title>Presentazione di assembly</title>
     <link rel="stylesheet" href="../css/stile.css">  
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   </head>
   <body>
     <ul>
-      <li><a href="comandi.html" class="navbarsx">I comandi</a></li>
+      <li><a href="comandi.html" class="sx">I comandi</a></li>
       <li><a href="../index.html" class="navbarc">HOME</a></li>
-      <li><a href="interrupt.html" class="navbardx">Gli Interrupt</a></li>
-      <li><a href="presentazione.html" class="attivo navbardx">Presentazione Assembly</a></li>
+      <li><a href="interrupt.html" class="dx">Gli Interrupt</a></li>
+      <li><a href="presentazione.html" class="attivo dx">Presentazione Assembly</a></li>
     </ul>
     <h1>Introduzione al linguaggio Assembly</h1>
-    <p class="testo">Il linguaggio assembly è un linguaggio di programmazione di basso livello che consente di scrivere istruzioni direttamente comprensibili dal processore. Questo tipo di linguaggio si colloca a un livello intermedio tra il codice sorgente di alto livello e il codice macchina.</p>
+    <p>Il linguaggio assembly e un linguaggio di programmazione di basso livello che consente di scrivere istruzioni direttamente comprensibili dal processore. Questo tipo di linguaggio si colloca a un livello intermedio tra il codice sorgente di alto livello e il codice macchina.</p>
     <h2>Cos'è il Linguaggio Assembly</h2> 
-    <p class="testo"> L'assembly è un linguaggio strettamente legato all'architettura hardware di un sistema. Ogni istruzione in assembly corrisponde a un'operazione specifica del processore, come caricare dati dalla memoria, eseguire operazioni aritmetiche o gestire il flusso di controllo di un programma. Grazie a questa stretta correlazione, il codice assembly è altamente efficiente e può eseguire operazioni a una velocità maggiore rispetto ai linguaggi di alto livello.</p>
+    <p> L'assembly e un linguaggio strettamente legato all'architettura hardware di un sistema. Ogni istruzione in assembly corrisponde a un'operazione specifica del processore, come caricare dati dalla memoria, eseguire operazioni aritmetiche o gestire il flusso di controllo di un programma. Grazie a questa stretta correlazione, il codice assembly e altamente efficiente e puo eseguire operazioni a una velocita maggiore rispetto ai linguaggi di alto livello.</p>
     <div class="polaroid dx">
-      <img src="../img/8086.jpg" alt="8086" style="width:100%">
+      <img src="../img/differenza.png" alt="8086" style="width:100%">
       <div class="testoCartolina">
-        <p>Il processore 8086</p>
+        <p>La differenza tra un linguaggio di alto livello e assembly</p>
       </div>
     </div>
     <h2>Struttura e Sintassi</h2> 
-    <p class="testo">La sintassi dell'assembly varia a seconda dell'architettura del processore, ma in generale le istruzioni sono composte da operandi e mnemonici. I mnemonici sono abbreviazioni delle istruzioni di basso livello, come MOV (per spostare dati), ADD (per sommare) e SUB (per sottrarre). Gli operandi possono essere registri, valori immediati o indirizzi di memoria. Questa struttura rende il codice assembly più leggibile rispetto al codice macchina puro, ma richiede comunque una buona comprensione del funzionamento interno del processore.</p>
+    <p>La sintassi dell'assembly varia a seconda dell'architettura del processore, ma in generale le istruzioni sono composte da operandi e mnemonici. Gli mnemonici sono abbreviazioni delle istruzioni di basso livello, come MOV (per spostare dati), ADD (per sommare) e SUB (per sottrarre). Gli operandi possono essere registri, valori immediati o indirizzi di memoria. Questa struttura rende il codice assembly piu leggibile rispetto al codice macchina puro, ma richiede comunque una buona comprensione del funzionamento interno del processore.</p>
     <div class="polaroid sx">
-      <img src="../img/8086Moderno.jpg" alt="8086 a confronto" >
+      <img src="../img/assembler.png" alt="8086 a confronto" >
       <div class="testoCartolina">
-        <p>Processore 8086 a confronto con un moderno processore</p>
+        <p>Da assembly a file eseguibile</p>
       </div>
     </div>
     <h2>Le difficolta del linguaggio</h2>
-    <p class="testo">Tuttavia, la programmazione in assembly presenta anche delle sfide. Richiede una conoscenza approfondita dell'architettura hardware e delle modalità di funzionamento del sistema operativo. Inoltre, il codice assembly è spesso più difficile da leggere e mantenere rispetto ai linguaggi di alto livello, il che può rendere lo sviluppo e il debugging più complessi. La portabilità è un'altra problematica: un programma scritto in assembly per un certo tipo di processore non funzionerà su un altro senza modifiche significative.</p>
+    <p>Tuttavia, la programmazione in assembly presenta anche delle sfide. Richiede una conoscenza approfondita dell'architettura hardware e delle modalita di funzionamento del sistema operativo. Inoltre, il codice assembly e spesso più difficile da leggere e capire rispetto ai linguaggi di alto livello, il che puo rendere lo sviluppo e il debugging piu complessi. La portabilità e un'altra problematica: un programma scritto in assembly su una macchina non funzionera su un altra senza modifiche significative visto che esso e strettamente collegato al processore.</p>
+    <h2 class="abbassa">Le sezioni principali di un programma assembly</h2>
+    <p>Un programma Assembly tipico e diviso in diverse sezioni, ognuna con uno scopo specifico. Ecco le sezioni principali:</p>
+    <p><b>Sezione dati (data segment): </b>Questa sezione contiene tutte le variabili, le costanti e altri dati che il programma utilizza. Gli elementi possono essere definiti con direttive come DB (define byte), DW (define word), ecc.</p>
+    <p><b>Sezione di codice (code segment): </b>Contiene le istruzioni che costituiscono il programma. Questa e la parte del programma che viene eseguita.</p>
+    <p><b>Sezione di stack (stack segment): </b>Anche se non sempre definita esplicitamente, questa sezione e riservata per il stack, utilizzato per memorizzare dati temporanei e gestire chiamate di funzione e ritorni.</p>
+    <p><b>Sezione extra (extra segment): </b>Talvolta, possono esserci sezioni aggiuntive per scopi specifici, come dati aggiuntivi o ulteriori istruzioni.</p>
     <footer>
       <p>
       <b>Pietro Marchesi 4BI</b>
       <br>
-      <b>Fonti:</b>	
+      <b>Presentazione di assembly</b>	
       </p>
-      <img src="../img/8086.jpg" height="100">
+      <img src="../img/icon.png" height="100">
     </footer>
   </body>
 </html>

@@ -1,0 +1,5 @@
+Il router collega una rete ad un altra rete mentre l'apparecchio che collgega tutte le maccchine di una rete e uno switch e lavora al livello 2 dell'iso/osi
+
+l'indirizzo ip avviene al 3 livello dell'iso/osi livello rete che si occupa della gestione delle singole macchine della rete e quindi anche l'assegnazione dell'indirizzo
+
+Uno switch non puo avere un indirizzo ip perche lavora a livello 2 e l'indirizzo viene assegnato a livello 3 percio lavora con gli indirizzi mac

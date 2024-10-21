@@ -18,9 +18,16 @@ typedef struct TNodo {
 }TNodo;
 
 //Prototipi
+void menu();
 TNodo* importazione(TNodo* first, char* nf);
-void stampa(TNodo* first);
 bool controllo(TAuto* a,TNodo* first);
+TNodo* ricercaTarga(char* targa,TNodo* first);
+void stampa(TNodo* first);
+void visualizzaDati(TNodo* first);
+void esportaTipo(TNodo* first);
+void calcoloDaTarga(TNodo* first);
+void calcoloStampa(TNodo* nodo);
+
 
 //PROTOTIPI FUNZIONI INPUT
 int leggiInt (int vmin, int vmax, char *msg);

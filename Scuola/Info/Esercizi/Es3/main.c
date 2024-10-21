@@ -33,6 +33,7 @@ int main()
     char nf[LEN];
     TNodo* first = NULL;
     do {
+      menu();
       sc = leggiInt(0, 5,"Fare la propria scelta");
       switch (sc) {
         case 1:
@@ -42,10 +43,13 @@ int main()
           stampa(first);
           break;
         case 3:
+          visualizzaDati(first);
           break;
         case 4:
+          esportaTipo(first);
           break;
         case 5:
+          calcoloDaTarga(first);
           break;
         case 0:
           printf("Grazie per aver usato il programma\n");

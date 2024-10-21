@@ -1,0 +1,62 @@
+Il layout e la configurazione 
+Tutti sono nodi ma l'host e il pc 
+
+L'hub(concentratore) la distanza massima tra l'hub e un pc e di 100m
+
+Le reti vengono classificate per 
+ dimensione
+ metodo di trasferimento 
+ topologia
+
+La dimensione delle reti
+pan rete personale e di solito la propria wa(work area)
+lan rete locale i collegamenti vanno da qualche decina di metri a un kilometro 
+Man rete che collega a livello cittadino
+wan collega dispositiva che si trovano almento in 2 continenti diversi
+gan collega dispositivi che si trovano in tutto il mondo
+
+RETI LOCALI lan
+topologie usate
+  stella(unico nodo centrale e tutte le altre si collegano)
+  anello
+  bus
+  albero
+
+architettura a stella
+Tutti in nodi sono collegaati ad un computer centarle detto host
+svantaggio se si rompr il concentratore la rete non va piu
+vantaggio se si rompe un nodo la rete funziona lo stesso
+Caratteristiche
+facilmente espandibile
+devo mettere mano sull'host se devo aggiungere una roba
+esiste un collo di bottiglia stazione centrale 
+i nodi non possono distare molto dalls dtazione cenyrsle
+
+architettura ad anello
+una machina riceve un messaffio solo dalla macchina prima e lo manda solamente al seguente 
+
+L'oggetto che fa scattare il doppio anello COMPITO PER CASA
+
+se si rompe una macchina la rete non si puo usare
+e stato inventato un doppio anello, quando si rompe un nodo il meccanismo fa scattare il robe che chiude il circuito dove c'e stato il guasto 
+il token e un codice scritto in binario che continua a girare sulla rete e se qualcuno vuole comunicare se lo prene e quando ha finito lo libero
+se il token e stato preso gli altri non possono comunicare
+E difficcile aggiungere un nodo in piu mentre si aggiunge la rete non funziona
+
+Caratteristiche
+economica non e facilmente espandibile
+
+ARCHITETTURA a bus
+un unica fila dove tutti si collegano e tutti possono trasmettere 
+Il problema e che se si sompre il bus centrale la rete si divide e potrebbe non funzionare correttamente 
+
+economica e facilemte espandibile il collegamente principale puo essre usato da una sola stazione
+
+IL MAC
+Medium access control: protocoll oche riguarda l'accesso al mezzo trasmittivo
+Architettura ad anello
+  token ring 
+  lotted ring
+Architettura a bus
+  csma(ascolto della portante per accesso multiplo)  cd(collision detection)
+

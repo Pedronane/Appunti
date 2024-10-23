@@ -45,28 +45,33 @@ FINE
 */
 TNodo* importazione(TNodo* first, char* nf){
   TNodo* aus;
-  TAuto* a = NULL;
+  TAuto a;
   FILE* f = fopen(nf,"r");
   char str[LEN];
   if(f != NULL) {
     fgets(str,LEN,f);
     while (!feof(f)) {
-      strcpy(a->targa,strtok(str,";"));
-      strcpy(a->modello,strtok(NULL,";"));
-      strcpy(a->tipo,strtok(NULL,";"));
-      a->prezzo = atof(strtok(NULL,";"));
-      a->km = atof(strtok(NULL,";"));
+      strcpy(a.targa,strtok(str,";"));
+      strcpy(a.modello,strtok(NULL,";"));
+      strcpy(a.tipo,strtok(NULL,";"));
+      a.prezzo = atof(strtok(NULL,";"));
+      a.km = atof(strtok(NULL,";"));
       bool con = controllo(a, first);
       if(!con){
-        first->a = *(a);
-        aus = first;
-        first = (TNodo*) malloc(sizeof(TNodo));
-        first->next = aus;
+        if(first == NULL){
+          first = (TNodo*) malloc(sizeof(TNodo));
+          first->a = a;
+          first->next = NULL;
+        }else{
+          aus = first;
+          first = (TNodo*) malloc(sizeof(TNodo));
+          first->next = aus;
+          first->a = a;
+        }
       }
       fgets(str,LEN,f);
     }
-    if(a==NULL)
-      printf("I dati inseriti non sono corretti");
+    fclose(f);
   }
   return first;
 }
@@ -82,12 +87,12 @@ INIZIO
   controlla che il nodo a sia corretto
 FINE
 */
-bool controllo(TAuto* a,TNodo* first){
+bool controllo(TAuto a,TNodo* first){
   bool tro = true;
-    if(ricercaTarga(a->targa,first) == NULL){
-      if(strcmp(a->tipo,"Utilitaria")==0 || strcmp(a->tipo,"Lusso")==0 || strcmp(a->tipo,"Confort")==0){
-        if(a->prezzo>0){
-          if(a->km > 0){
+    if(ricercaTarga(a.targa,first) == NULL){
+      if(strcmp(a.tipo,"Utilitaria")==0 || strcmp(a.tipo,"Lusso")==0 || strcmp(a.tipo,"Confort")==0){
+        if(a.prezzo>0){
+          if(a.km > 0){
             tro = false;
           }
         }

@@ -20,7 +20,7 @@ typedef struct TNodo {
 //Prototipi
 void menu();
 TNodo* importazione(TNodo* first, char* nf);
-bool controllo(TAuto* a,TNodo* first);
+bool controllo(TAuto a,TNodo* first);
 TNodo* ricercaTarga(char* targa,TNodo* first);
 void stampa(TNodo* first);
 void visualizzaDati(TNodo* first);

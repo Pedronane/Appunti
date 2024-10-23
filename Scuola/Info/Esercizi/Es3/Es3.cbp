@@ -31,6 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="f.csv" />
 		<Unit filename="funzioni.c">
 			<Option compilerVar="CC" />
 		</Unit>

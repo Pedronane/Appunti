@@ -37,6 +37,7 @@ int main()
       sc = leggiInt(0, 5,"Fare la propria scelta");
       switch (sc) {
         case 1:
+          leggiStr(nf,"Inserire il nome del file");
           first = importazione(first,nf);
           break;
         case 2:
